@@ -4,19 +4,18 @@ pipeline{
     stages{
         stage("virtual-environment"){
             input{
-                message "Add changes?"
+                message "Virtual Environment"
                 ok "Yes"
                 parameters{
                     choice(
-                        choices: ['fetch'],
-                        name: 'REPO_NAME'
+                        choices: ['ONE', 'TWO'],
+                        name: 'PARAMETER_01'
                         )
                     }
-
             }
 
             steps {
-                sh './scripts/restart_services.sh ${REPO_NAME}'
+                echo "${PARAMETER_01}"
             }
 
         }
