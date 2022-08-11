@@ -15,6 +15,8 @@ import os
 from dotenv import dotenv_values
 
 
+config = dotenv_values(".env")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +30,7 @@ SECRET_KEY = 'django-insecure-mi6*15ihl=%^heuckmf7^t0gggr=xfjzkd1^$e77!=cetc6hkp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [config['ALLOWED_HOST_IP']]
 
 
 # Application definition
@@ -76,7 +78,6 @@ WSGI_APPLICATION = 'fetch.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-config = dotenv_values(".env")
 
 DATABASES = {
     'default': {
