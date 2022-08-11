@@ -10,7 +10,7 @@
 SERVER=3.111.213.79
 KEY="tux_fanboy.pem"
 
-REPO_NAME=fetch
+REPO_NAME=$1
 
 ssh -i ~/.keys/$KEY ubuntu@$SERVER<<EOF
 
