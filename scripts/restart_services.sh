@@ -7,10 +7,8 @@
 # 2. git pull
 # 3. restart_services
 
-if [[ $2 -eq 1 ]]; then
-   SERVER=3.111.213.79
-   KEY="tux_fanboy.pem"
-fi
+SERVER=3.111.213.79
+KEY="tux_fanboy.pem"
 
 REPO_NAME=fetch
 
