@@ -7,8 +7,8 @@
 # 2. git pull
 # 3. restart_services
 
-SERVER=3.111.213.79
-KEY="tux_fanboy.pem"
+SERVER=3.108.64.155
+KEY="django_test.pem"
 
 REPO_NAME=$1
 
